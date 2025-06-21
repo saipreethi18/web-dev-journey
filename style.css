@@ -1,12 +1,276 @@
 
-.change {
-  color: green;
+.intro{
+    color:aliceblue;
+    text-align:center;
+   
 }
 
-.make {
-  color: red;
+  .holo-card {
+  width: 300px;
+  margin: 40px auto;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+  position: relative;
 }
 
-body {
-  background-color: yellow;
+.holo-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
 }
+
+.holo-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(120deg, #00ffff, #ff00ff, #00ffff);
+  background-size: 400% 400%;
+  animation: holoGlow 5s linear infinite;
+  opacity: 0.3;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.holo-card:hover {
+  transform: scale(1.05) rotateX(5deg) rotateY(5deg);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.5),
+              0 0 60px rgba(255, 0, 255, 0.4);
+}
+
+/* Optional shimmer effect */
+.holo-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0.2) 100%);
+  transform: skewX(-25deg);
+  z-index: 1;
+  transition: left 0.5s ease;
+}
+
+.holo-card:hover::after {
+  left: 125%;
+}
+
+@keyframes holoGlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.about-me {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05); /* subtle card */
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+  color: white;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.about-me h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff;
+}
+
+.about-me p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.education {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+  color: white;
+}
+
+.education h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff;
+  text-align: center;
+}
+
+.education ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.education li {
+  font-size: 18px;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.know-more {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.know-more a {
+  display: inline-block;  /* Important for proper layout */
+  background: linear-gradient(45deg, #00ffff, #ff00ff);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+  margin-top: 20px;
+  position: relative; /* Remove 'absolute' unless needed */
+}
+
+
+  body {
+  background-color: black;
+}
+
+.life {
+   
+  font-size: 80px;
+  color: white; /* Inner text color */
+  text-align: center;
+  margin-top: 50px;
+}
+
+
+.page-border {
+  border: 2px solid lavenderblush;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.intro-section{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.back-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(45deg, #00ffff, #ff00ff);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+}
+
+.back-button:hover {
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+}
+
+.tab-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.08);
+  margin-bottom: 40px;
+}
+
+.tab-icon {
+  font-size: 60px;
+  line-height: 1;
+  padding-top: 5px;
+}
+
+.tab-content-text {
+  flex: 1;
+  font-family: 'Poppins', sans-serif;
+  color: #f2f2f2;
+}
+
+.tab-content-text h2 {
+  font-size: 32px;
+  color: #00ffff;
+  margin-bottom: 20px;
+}
+
+.tab-content-text h3 {
+  font-size: 20px;
+  color: #c2559e;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.tab-content-text p em {
+  color: #ccc;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.tab-content-text ul {
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+.tab-content-text ul li {
+  margin-bottom: 8px;
+  list-style: disc;
+}
+
+/* Optional hover */
+.job:hover {
+  background: #2a2a2a;
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+
+.footer {
+  background-color: #111;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #333;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-icons a {
+  color: #00ffff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.footer-icons a:hover {
+  color: #ff00ff;
+}
+
+.footer-icons i {
+  margin-right: 8px;
+}
+

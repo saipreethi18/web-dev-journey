@@ -1,39 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Me</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+
 </head>
-
 <body>
-  <div> 
-    <h1 class="change">we are learning css</h1>
-    <h1 class="make">we are gone understand more </h1>
-     
-  <h2 style="color: brown;">Education</h2>
-  <p style="color:blueviolet;">Iam currently pursuing my Master's degree in Computer and Information Science at the University of Florida.  
-     My studies focus on software development, data systems, and modern computing technologies.</p>
-    <img src="https://www.usnews.com/dims4/USNEWS/3a05d40/17177859217/resize/800x540%3E/quality/85/?url=https%3A%2F%2Fwww.usnews.com%2Fcmsmedia%2Fc9%2F844457842f898f790238b07f5a20a5%2F2021-04-20_Campus-Photos-2.jpg"alt="university of florida" width= "400">
-  </div>
-  <div>
-    <h2 style="color:brown">Experience</h2>
-    <p style="color:blueviolet">I worked as a Software Intern at HCL Technologies, where I contributed to building secure, cloud-based applications using GCP, React, and Spring Boot.
-         I collaborated with senior engineers to develop Splunk dashboards for large-scale data analysis and improved system security. 
-         My role also involved designing RESTful APIs and integrating CI/CD pipelines to streamline deployments.</p>
-         <img src= "https://media.glassdoor.com/lst2x/85/ca/83/31/hcl-ags.jpg?signature=05050bf455086a137455cb44e24f86ae61994a4274e14823e12a490ae8fb8370" alt="Hcl technologies" width="400">
-  </div>
-  <section><h2 style="color: brown;" >connect!</h2>
-<p style="color: blueviolet;">
-  You can explore more of my work on
-  <a href="https://github.com/saipreethi18" style="color:black;">Github</a>
-</p>
-<p style="color:blueviolet;"> feel free to connect with me on LinkedIn — I’d love to connect and collaborate!
-    <a href="https://www.linkedin.com/in/sai-preethi123/" style="color: black">linkedin</a>
-</p>
+  <a href="index.html" class="back-button">← Back to Home</a>
 
-</section>
+  <section class="about-menu">
+    <nav>
+      <ul class="menu">
+        <li class="menu-item active" data-tab="experience">Experience</li>
+        <li class="menu-item" data-tab="projects">Projects</li>
+        <li class="menu-item" data-tab="skills">Skills</li>
+      </ul>
+    </nav>
 
+<div class="tab active" id="experience">
+  <div class="tab-wrapper">
+    <div class="tab-icon">💼</div>
+    <div class="tab-content-text">
+      <h2>Work Experience</h2>
+
+      <div class="job">
+        <h3>Teaching Assistant – Computer Networks</h3>
+        <p><em>University of Florida | Jan 2025 – Present | Gainesville, FL</em></p>
+        <ul>
+          <li>Instructed 50+ undergraduate students in TCP/IP, routing, and network security.</li>
+          <li>Provided real-time support and handled multiple student queries efficiently.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Research Assistant – AI & Genomics</h3>
+        <p><em>University of Florida | Dec 2024 – Present | Gainesville, FL</em></p>
+        <ul>
+          <li>Processed 1TB+ genomic data using ML models (ESM-C/ESM3), improving throughput by 30%.</li>
+          <li>Benchmarked workflows on HiPerGator HPC and improved validation processes.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Software Intern – HCL Technologies</h3>
+        <p><em>Dec 2023 – Jun 2024 | Chennai, India</em></p>
+        <ul>
+          <li>Built secure GCP-based apps, implemented IAM access, and optimized Splunk dashboards.</li>
+          <li>Developed Spring-React microservices, enhanced API performance by 30%.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div id="projects" class="tab">
+  <h2>Projects</h2>
+
+  <h3>JuliaDelphiCompiler <a href="https://github.com/your-repo-link">(GitHub)</a></h3>
+  <p>ANTLR 4, Julia, Compiler Design</p>
+  <ul>
+    <li>Built a Delphi-like compiler using ANTLR 4 and Julia, adding OOP support.</li>
+    <li>Implemented inheritance, classes, and a custom interpreter with test cases.</li>
+  </ul>
+
+  <h3>Book Ease – Travel Website <a href="https://github.com/your-repo-link">(GitHub)</a></h3>
+  <p>React, MySQL, Go, Secure Payment API</p>
+  <ul>
+    <li>Developed a travel booking site with secure transactions and mobile-first UI.</li>
+    <li>Integrated payment APIs and backend with Go.</li>
+  </ul>
+
+  <h3>P2PFileTransfer <a href="https://github.com/your-repo-link">(GitHub)</a></h3>
+  <p>Python, Networking, Security</p>
+  <ul>
+    <li>Built a peer-to-peer file transfer system with encryption and protocol design.</li>
+    <li>Logged peer activity and ensured secure transmission under network stress.</li>
+  </ul>
+</div>
+
+      <div id="skills" class="tab">
+  <h2>Technical Skills</h2>
+
+  <h3>Programming Languages</h3>
+  <p>JavaScript, TypeScript, C++, Python, Java, Go, SQL</p>
+
+  <h3>Web & Mobile Development</h3>
+  <p>React, React Native, Node.js, REST APIs, HTML, CSS, Secure Payments, WordPress</p>
+
+  <h3>Cloud & DevOps</h3>
+  <p>AWS, GCP, Docker, Kubernetes, Terraform, CI/CD, Serverless</p>
+
+  <h3>Data Science & ML</h3>
+  <p>Python, Machine Learning, Genomics, ESM-C/ESM3, GenAI SDKs</p>
+
+  <h3>Tools & Environments</h3>
+  <p>Git, Postman, JIRA, VS Code, Eclipse, PyCharm, Arduino</p>
+</div>
+
+    </div>
+  </section>
+
+  <script>
+    // Simple tab switcher script
+    const menuItems = document.querySelectorAll('.menu-item');
+    const tabs = document.querySelectorAll('.tab');
+
+    menuItems.forEach(item => {
+      item.addEventListener('click', () => {
+        // Remove active from all menu items
+        menuItems.forEach(i => i.classList.remove('active'));
+        // Add active to clicked item
+        item.classList.add('active');
+
+        const target = item.getAttribute('data-tab');
+        // Hide all tabs
+        tabs.forEach(tab => tab.classList.remove('active'));
+        // Show selected tab
+        document.getElementById(target).classList.add('active');
+      });
+    });
+  </script>
+ <footer class="footer">
+  <div class="footer-icons">
+    <a href="mailto:saipreethikota18@gmail.com" title="Email"><i class="fas fa-envelope"></i> Contact</a>
+    <a href="https://www.linkedin.com/in/sai-preethi123/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <a href="https://github.com/saipreethi18" target="_blank" title="GitHub"><i class="fab fa-github"></i> GitHub</a>
+  </div>
+</footer>
 
 </body>
 </html>
