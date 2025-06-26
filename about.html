@@ -7,125 +7,49 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+
 
 
 </head>
 <body>
   <a href="index.html" class="back-button">← Back to Home</a>
 
-  <section class="about-menu">
-    <nav>
-      <ul class="menu">
-        <li class="menu-item active" data-tab="experience">Experience</li>
-        <li class="menu-item" data-tab="projects">Projects</li>
-        <li class="menu-item" data-tab="skills">Skills</li>
+  <div class="about-page">
+  <div class="left-icon">
+    🧑‍💻
+  </div>
+
+  <div class="middle-menu">
+    <ul>
+      <li class="menu-item" data-tab="experience">Experience</li>
+      <li class="menu-item" data-tab="projects">Projects</li>
+      <li class="menu-item" data-tab="skills">Skills</li>
+    </ul>
+  </div>
+
+  <div class="right-content">
+    <h2>Work Experience</h2>
+    <div class="job-entry">
+      <div class="job-title">
+        <strong>Teaching Assistant</strong><br>
+        University of florida
+      </div>
+      <div class="job-dates">
+        Dec 2023 – July 2024
+      </div>
+      <ul>
+        <li>LLM-based code review system — +30% efficiency.</li>
+        <li>LangChain-powered search — 40% faster queries.</li>
+        <li><strong>Tech:</strong> FastAPI, Python, AWS, Docker</li>
       </ul>
-    </nav>
-
-<div class="tab active" id="experience">
-  <div class="tab-wrapper">
-    <div class="tab-icon">💼</div>
-    <div class="tab-content-text">
-      <h2>Work Experience</h2>
-
-      <div class="job">
-        <h3>Teaching Assistant – Computer Networks</h3>
-        <p><em>University of Florida | Jan 2025 – Present | Gainesville, FL</em></p>
-        <ul>
-          <li>Instructed 50+ undergraduate students in TCP/IP, routing, and network security.</li>
-          <li>Provided real-time support and handled multiple student queries efficiently.</li>
-        </ul>
-      </div>
-
-      <div class="job">
-        <h3>Research Assistant – AI & Genomics</h3>
-        <p><em>University of Florida | Dec 2024 – Present | Gainesville, FL</em></p>
-        <ul>
-          <li>Processed 1TB+ genomic data using ML models (ESM-C/ESM3), improving throughput by 30%.</li>
-          <li>Benchmarked workflows on HiPerGator HPC and improved validation processes.</li>
-        </ul>
-      </div>
-
-      <div class="job">
-        <h3>Software Intern – HCL Technologies</h3>
-        <p><em>Dec 2023 – Jun 2024 | Chennai, India</em></p>
-        <ul>
-          <li>Built secure GCP-based apps, implemented IAM access, and optimized Splunk dashboards.</li>
-          <li>Developed Spring-React microservices, enhanced API performance by 30%.</li>
-        </ul>
-      </div>
     </div>
+    <!-- Repeat job-entry for other roles -->
   </div>
 </div>
 
-
-      <div id="projects" class="tab">
-  <h2>Projects</h2>
-
-  <h3>JuliaDelphiCompiler <a href="https://github.com/your-repo-link">(GitHub)</a></h3>
-  <p>ANTLR 4, Julia, Compiler Design</p>
-  <ul>
-    <li>Built a Delphi-like compiler using ANTLR 4 and Julia, adding OOP support.</li>
-    <li>Implemented inheritance, classes, and a custom interpreter with test cases.</li>
-  </ul>
-
-  <h3>Book Ease – Travel Website <a href="https://github.com/your-repo-link">(GitHub)</a></h3>
-  <p>React, MySQL, Go, Secure Payment API</p>
-  <ul>
-    <li>Developed a travel booking site with secure transactions and mobile-first UI.</li>
-    <li>Integrated payment APIs and backend with Go.</li>
-  </ul>
-
-  <h3>P2PFileTransfer <a href="https://github.com/your-repo-link">(GitHub)</a></h3>
-  <p>Python, Networking, Security</p>
-  <ul>
-    <li>Built a peer-to-peer file transfer system with encryption and protocol design.</li>
-    <li>Logged peer activity and ensured secure transmission under network stress.</li>
-  </ul>
-</div>
-
-      <div id="skills" class="tab">
-  <h2>Technical Skills</h2>
-
-  <h3>Programming Languages</h3>
-  <p>JavaScript, TypeScript, C++, Python, Java, Go, SQL</p>
-
-  <h3>Web & Mobile Development</h3>
-  <p>React, React Native, Node.js, REST APIs, HTML, CSS, Secure Payments, WordPress</p>
-
-  <h3>Cloud & DevOps</h3>
-  <p>AWS, GCP, Docker, Kubernetes, Terraform, CI/CD, Serverless</p>
-
-  <h3>Data Science & ML</h3>
-  <p>Python, Machine Learning, Genomics, ESM-C/ESM3, GenAI SDKs</p>
-
-  <h3>Tools & Environments</h3>
-  <p>Git, Postman, JIRA, VS Code, Eclipse, PyCharm, Arduino</p>
-</div>
-
-    </div>
-  </section>
-
-  <script>
-    // Simple tab switcher script
-    const menuItems = document.querySelectorAll('.menu-item');
-    const tabs = document.querySelectorAll('.tab');
-
-    menuItems.forEach(item => {
-      item.addEventListener('click', () => {
-        // Remove active from all menu items
-        menuItems.forEach(i => i.classList.remove('active'));
-        // Add active to clicked item
-        item.classList.add('active');
-
-        const target = item.getAttribute('data-tab');
-        // Hide all tabs
-        tabs.forEach(tab => tab.classList.remove('active'));
-        // Show selected tab
-        document.getElementById(target).classList.add('active');
-      });
-    });
-  </script>
  <footer class="footer">
   <div class="footer-icons">
     <a href="mailto:saipreethikota18@gmail.com" title="Email"><i class="fas fa-envelope"></i> Contact</a>
